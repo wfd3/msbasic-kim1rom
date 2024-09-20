@@ -1,4 +1,4 @@
-# Microsoft BASIC for 6502
+# Microsoft BASIC for 6502 -- Modified for a KIM-1 with an external ROM
 
 This is a single integrated assembly source tree that can generate nine different versions of Microsoft BASIC for 6502.
 
