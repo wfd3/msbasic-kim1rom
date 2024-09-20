@@ -55,8 +55,16 @@ INLIN2:
 INLINAIM:
     .endif
     .ifndef CONFIG_NO_LINE_EDITING
+      .if .def(CONFIG_BS_PATCH) && .def(KIMROM)
+        jsr     CHKDEL
+      .endif
+      .ifdef CONFIG_BS_PATCH
+        cmp     #$08
+        beq     L2420   ; BS
+      .else
         cmp     #$07
         beq     L2443
+      .endif
     .endif
         cmp     #$0D
         beq     L2453

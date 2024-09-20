@@ -3,7 +3,7 @@
 .ifdef APPLE
 .include "apple_loadsave.s"
 .endif
-.ifdef KIM
+.if .def(KIM) || .def(KIMROM)
 .include "kim_loadsave.s"
 .endif
 .ifdef MICROTAN

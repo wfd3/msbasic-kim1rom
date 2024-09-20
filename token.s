@@ -71,6 +71,11 @@
 		keyword_rts "OPEN", OPEN
 		keyword_rts "CLOSE", CLOSE
 .endif
+.ifdef KIMROM
+		keyword_rts  "SYSTEM", SYSTEM
+		keyword_rts  "CLS", CLS
+		keyword_rts  "SYS", SYS
+.endif
 .ifndef CONFIG_SMALL
 		keyword_rts "GET", GET
 .endif
@@ -125,6 +130,7 @@ UNFNC:
 		keyword_addr "RND", RND
 		keyword_addr "LOG", LOG
 		keyword_addr "EXP", EXP
+
 .segment "VECTORS"
 UNFNC_COS:
 		keyword_addr "COS", COS

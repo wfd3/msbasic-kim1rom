@@ -14,7 +14,7 @@
 .ifdef APPLE
 .include "apple_iscntc.s"
 .endif
-.ifdef KIM
+.if .def(KIM) || .def(KIMROM)
 .include "kim_iscntc.s"
 .endif
 .ifdef MICROTAN

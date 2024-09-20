@@ -293,7 +293,7 @@ L40FA:
         ldy     LINNUM+1
         sta     MEMSIZ
         sty     MEMSIZ+1
-.if !(.def(MICROTAN) || .def(AIM65) || .def(SYM1))
+.if !(.def(MICROTAN) || .def(AIM65) || .def(SYM1) || .def(KIMROM))
         sta     FRETOP
         sty     FRETOP+1
 .endif
@@ -488,7 +488,7 @@ QT_BASIC:
   .ifdef OSI
         .byte   "OSI 6502 BASIC VERSION 1.0 REV 3.2"
   .endif
-  .ifdef KIM
+  .if .def(KIM) || .def(KIMROM)
         .byte   "MOS TECH 6502 BASIC V1.1"
   .endif
   .ifdef MICROTAN

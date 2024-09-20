@@ -4,6 +4,10 @@
 .include "kim_extra.s"
 .endif
 
+.ifdef KIMROM
+.include "kimrom_extra.s"
+.endif 
+
 .ifdef CONFIG_CBM1_PATCHES
 .include "cbm1_patches.s"
 .endif

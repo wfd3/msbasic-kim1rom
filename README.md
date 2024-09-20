@@ -18,6 +18,7 @@ These are the first ten (known) versions of Microsoft BASIC for 6502:
 | Commodore BASIC 2   |  1979    |              |  Y   |   Y    |    $0200     |     CBM     | CONFIG_2A  |
 | KBD BASIC           |  1982    |              |  Y   |   N    |    $0700     |     KBD     | CONFIG_2B  |
 | MicroTAN            |  1980    |              |  Y   |   Y    |      ZP      |      -      | CONFIG_2C  |
+| KIM ROM BASIC       |   N/A    | 1.1          |  Y   |   Y    |      ZP      |   Custom    | CONFIG_11A |
 
 (Note that this assembly source cannot (yet) build AppleSoft II.)
 
@@ -50,6 +51,7 @@ The following symbols can be defined in addition:
 | CONFIG_SCRTCH_ORDER               | where in the init code to call SCRTCH
 | CONFIG_SMALL                      | use 6 digit FP instead of 9 digit, use 2 character error messages, don't have GET
 | CONFIG_SMALL_ERROR                | use 2 character error messages
+| CONFIG_BS_PATCH                   | use backspace to correct typing errors (see [Microsoft KB-9 Basic](http://retro.hansotten.nl/6502-sbc/kim-1-manuals-and-software/kim-1-software/microsoft-kb-9-basic/))
 
 Changing symbol definitions can alter an existing base configuration, but it not guaranteed to assemble
 or work correctly.
